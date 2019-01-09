@@ -12,8 +12,8 @@ This program, then, takes a sequence of numbered `.png` files as input, and renu
 
 ## Usage
 
-Usage:&nbsp; `java ImageFileRenumberer <path to image files> -n | +n`
-e.g. &nbsp;`java ImageFileRenumberer /home/john/photos/ +12`
+Usage: ```java ImageFileRenumberer <path to image files> -n | +n```
+e.g. ```java ImageFileRenumberer /home/john/photos/ +12```
 will rename files by adding 12 to each number.
 
 All image indices need to be positive, so if `k` is the minimum index (usually zero), and the increment `n` is negative, the program will complain if `abs(n) < k`.
