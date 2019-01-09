@@ -63,9 +63,10 @@ public class ImageFileRenumberer {
 				int num = 0;
 				try {
     				num = Integer.parseInt(numString);
+    				if (num < 0) throw new NumberFormatException("Image indices cannot be negative");
 				}
 				catch (NumberFormatException nfe) {
-					System.out.println("\nFile " + name + " doesn't have a valid integer in the middle." + 
+					System.out.println("\nFile " + name + " doesn't have a valid positive integer in the middle." + 
 						"\nAll files to be renumbered must be named in the form xxxnnnnnxxxx, " + 
 						"\nwhere x represents any valid filename character " + 
 						"\nand nnnnn represents a sequence of digits, " +
