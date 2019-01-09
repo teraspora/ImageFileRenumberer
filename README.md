@@ -4,7 +4,7 @@
 
 When generating fractal images of Julia sets with an escape-time algorithm, I generate big sequences of image files in `.png` format, as I vary the constant which defines the Julia set for a particular function, so that I can combine them to make videos of the mutating fractal.
 
-I name these `img00000.png`, `img000001.png` etc.
+I name these `img00000.png`, `img00001.png` etc.
 
 I often then make a title sequence and an ending sequence.   These I also number from zero.   So in order to concatenate them it's necessary to add the length of the title sequence to the numbers in the main sequence, and add the length of these two combined to the numbers in the end sequence, so that I end up with a composite sequence of `n` images, numbered sequentially from zero to `n-1`.
 
@@ -12,8 +12,8 @@ This program, then, takes a sequence of numbered `.png` files as input, and renu
 
 ## Usage
 
-Usage: `java ImageFileRenumberer <path to image files> -n | +n`
- e.g. `java ImageFileRenumberer /home/john/photos/ +12`
+Usage:\n `java ImageFileRenumberer <path to image files> -n | +n`
+e.g. \n`java ImageFileRenumberer /home/john/photos/ +12`
 will rename files by adding 12 to each number.
 
 All image indices need to be positive, so if `k` is the minimum index (usually zero), and the increment `n` is negative, the program will complain if `abs(n) < k`.
